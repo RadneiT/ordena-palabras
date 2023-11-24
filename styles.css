@@ -1,0 +1,157 @@
+:root {
+    background-color: #242424;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+}
+/* Form */
+
+#word-form {
+    margin-top: 1em;
+    padding: 5px 55px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 420px;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2em 1em;
+}
+
+/* Input */
+.inputWords {
+    padding: 17px 25px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #2e279d;
+    color: #4d80e4; 
+}
+
+.inputWords:active {box-shadow: 2px 2px 15px #2e279d inset;}
+
+/* Buttons */
+
+button {
+    border: 3px solid #2e279d;
+    background-color: #4d80e4;
+    border-radius: .9em;
+    padding: 0.5em 0.8em 0.5em 0.5em;
+    transition: all ease-in-out .2s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+button:hover {background-color: #2e279d;}
+
+
+.button-container {
+    max-width: 90%;
+    width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.add-button {margin: 5px 20px;}
+
+.check-button input {
+    position:absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.check-button {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    padding: 4px;
+    border-radius: 0.9em;
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    border-radius: .5em;
+    background-color: #2e279d;
+    transition: .1s;
+}
+
+.checkmark span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.check-button input:checked ~ .checkmark {
+    background-color: #4d80e4;
+}
+
+.sort-button {margin: 10px 0 0 25px;}
+
+/* List View */
+
+.list-view {
+    margin-top: 3em;
+    padding: 10px;
+    max-width: 90%;
+    width: 500px;
+    background:rgba(47, 39, 155, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+    border: 3px solid #4d80e4;
+}
+
+ol {
+    padding: 20px 30px;
+    color: #fff;
+}
+
+ol li {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media(max-width: 991px) {
+    form {
+        padding: 50px 30px;
+        width: 100%;
+    }
+
+    input {padding: 15px;}
+}
