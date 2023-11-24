@@ -31,8 +31,6 @@ const sort = () => {
 
     ol.innerHTML = '';
 
-    showList.style.visibility = 'visible';
-
     let sortedWords = arrayWord.sort(function(a, b){return a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase())})
 
    
@@ -46,6 +44,12 @@ const sort = () => {
     }
 
     
+    if (ol.innerHTML === '') {
+        showList.style.visibility = 'hidden';
+    }else {
+        showList.style.visibility = 'visible';
+    }
+
     sortedWords.length = 0
 }
 
